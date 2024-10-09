@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PortDev</title>
+
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/loader.css">
+
+    <!-- update the version number as needed -->
+    <!-- <script defer src="/__/firebase/10.14.0/firebase-app-compat.js"></script> -->
+    <!-- include only the Firebase features as you need -->
+    <!-- <script defer src="/__/firebase/10.14.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/10.14.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/10.14.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/10.14.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/10.14.0/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/10.14.0/firebase-storage-compat.js"></script> -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="dashboard">
+            <div class="right">
+                <img src="./assets/images/profile_default.png" alt="avatar" id="avatar">
+                <p id="username">Username</p>
+                <p class="githubBio" id="githubBio">I Love coding</p>
+
+                <div class="interactions">
+                    <p><span id="following">1</span> Following</p>
+                    <p><span id="followers">2</span> Followers</p>
+                    <p><span id="publicRepos">10</span> Repositories</p>
+                </div>
+            </div>
+            <div class="left">
+                <div class="heading">Repositories <span>(select projects you'd like to showcase by clicking on
+                        them)</span></div>
+                <div id="reposContainer">
+                    <!-- LOADER SCREEN till data is fetched -->
+                    <div class="loader">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                        <div class="bar5"></div>
+                        <div class="bar6"></div>
+                        <div class="bar7"></div>
+                        <div class="bar8"></div>
+                        <div class="bar9"></div>
+                        <div class="bar10"></div>
+                        <div class="bar11"></div>
+                        <div class="bar12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+</body>
+
+</html>

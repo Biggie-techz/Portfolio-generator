@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--clr-clear);
+}
+
+:root {
+  --clr-black: #010409;
+  --clr-clear: #b7bdc8;
+
+  /* BORDER */
+  --border: 1px solid var(--clr-clear);
+  --curved-edge: 10px;
+  --full-circle: 50%;
+  --pill-shape: 100vw;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--clr-black);
+  color: var(--clr-clear);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.dashboard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: var(--border);
+  border-radius: var(--curved-edge);
+  padding: 10px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+}
+
+#avatar {
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: var(--full-circle);
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+#username {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.githubBio {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.interactions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  font-size: 1rem;
+}
+
+.interactions p {
+  display: flex;
+  font-size: 0.9rem;
+  gap: 5px;
+  color: var(--clr-clear);
+}
+
+.interactions p span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--clr-black);
+  position: relative;
+  background-color: var(--clr-clear);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(2rem / 20);
+}
+
+.left {
+  width: 70%;
+  height: 450px;
+  padding: 20px;
+  padding-right: 10px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--border);
+  border-radius: var(--curved-edge);
+}
+
+.left .heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  border-bottom: var(--border);
+}
+
+.left .heading span {
+  color: var(--clr-clear);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#reposContainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 1rem;
+}
+
+#reposContainer::-webkit-scrollbar {
+  width: 5px;
+}
+#reposContainer::-webkit-scrollbar-track {
+  background-color: var(--clr-black);
+}
+#reposContainer::-webkit-scrollbar-thumb {
+  background-color: var(--clr-clear);
+  border-radius: var(--pill-shape);
+}
+
+.repo {
+  width: 100%;
+  max-width: 300px;
+  color: var(--clr-clear);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: var(--border);
+  border-radius: var(--curved-edge);
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.repo div {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.repo div .link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.repo div p,
+.repo div .link {
+  color: inherit;
+}
+
+.repo:hover {
+  background-color: var(--clr-clear);
+  color: var(--clr-black);
+}
+.repo:hover .link {
+  text-decoration: underline;
+}
+
+@media (width < 1029px) {
+  .right {
+    width: 100%;
+  }
+  .left {
+    width: 100%;
+  }
+  .left .heading {
+    font-size: 1.2rem;
+  }
+  .left .heading span {
+    font-size: 0.8rem;
+  }
+  .repo {
+    max-width: 100%;
+  }
+  .repo div .link {
+    font-size: 1rem;
+  }
+}
+
+@media (width < 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .right {
+    width: 100%;
+  }
+  .left {
+    width: 100%;
+    height: 100%;
+  }
+  .left .heading {
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--clr-black);
+  }
+  .left .heading span {
+    font-size: 0.8rem;
+  }
+  .repo {
+    max-width: 100%;
+  }
+  .repo div .link {
+    font-size: 1rem;
+  }
+}

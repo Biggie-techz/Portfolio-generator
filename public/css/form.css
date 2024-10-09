@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(30%);
+}
+
+.heading {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  max-width: 700px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.socials {
+    position: relative;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.socials .span {
+    position: absolute;
+    top: -10px;
+    background-color: #fff;
+    padding-inline: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.required {
+    color: red;
+}
+.optional {
+    color: #ccc;
+}
+.username,
+.social1,
+.social2,
+.social3,
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 2.5px;
+}
+
+.skillInput {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  gap: 2.5px;
+}
+
+.label,
+.label,
+.label,
+.label {
+  position: absolute;
+  top: 25%;
+  font-size: 0.8rem;
+  left: 10px;
+  color: #424242;
+  transition: 0.3s;
+  background-color: #fff;
+  top: -5px;
+  padding-inline: 6px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  padding-top: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  line-height: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  word-spacing: 3px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+.skills button,
+.submitForm-btn,
+.generateTemplate-btn,
+.revert {
+  width: 100%;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.skillInput button:hover,
+.submitForm-btn:hover,
+.generateTemplate-btn:hover {
+  background-color: #0069d9;
+}
+.skillsAdded {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-block: 10px;
+}
+.skillsAdded div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.dropdown {
+  border: 1px solid #ccc;
+  max-height: 150px;
+  position: absolute;
+  overflow-y: auto;
+  top: 100%;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  width: 100%;
+}
+.dropdown div {
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  cursor: pointer;
+}
+.dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+.generateTemplate-btn,
+.revert {
+  padding: 5px;
+  font-size: small;
+  width: fit-content;
+}
+.submitForm-btn {
+  width: fit-content;
+  align-self: flex-end;
+}
