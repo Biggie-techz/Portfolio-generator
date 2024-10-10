@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="./css/loader.css">
 
+    <!-- FONT AWESOME CDN LINK -->
+    <script src="https://kit.fontawesome.com/20c0ef93e7.js" crossorigin="anonymous"></script>
     <!-- update the version number as needed -->
     <!-- <script defer src="/__/firebase/10.14.0/firebase-app-compat.js"></script> -->
     <!-- include only the Firebase features as you need -->
@@ -23,8 +25,16 @@
 
 <body>
     <div class="wrapper">
-        <div class="dashboard">
-            <div class="right">
+        <div class="navigate-scroll">
+            <a href="#dashboard">
+                <i class="fa-regular fa-hand-point-up"></i>
+            </a>
+            <a href="#templatesContainer">
+                <i class="fa-regular fa-hand-point-down"></i>
+            </a>
+        </div>
+        <div class="dashboard" id="dashboard">
+            <div class="left">
                 <img src="./assets/images/profile_default.png" alt="avatar" id="avatar">
                 <p id="username">Username</p>
                 <p class="githubBio" id="githubBio">I Love coding</p>
@@ -35,7 +45,7 @@
                     <p><span id="publicRepos">10</span> Repositories</p>
                 </div>
             </div>
-            <div class="left">
+            <div class="right">
                 <div class="heading">Repositories <span>(select projects you'd like to showcase by clicking on
                         them)</span></div>
                 <div id="reposContainer">
@@ -57,9 +67,72 @@
                 </div>
             </div>
         </div>
+        <div id="templatesContainer" class="templates-container">
+            <h2>Templates</h2>
+            <div>
+                <div class="template" data-template-id="template1">
+                    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Template 1">
+                    <div>
+                        <p id="templateID">Template 1</p>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="template" data-template-id="template2">
+                    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Template 2">
+                    <div>
+                        <p id="templateID">Template 2</p>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="template" data-template-id="template3">
+                    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Template 3">
+                    <div>
+                        <p id="templateID">Template 3</p>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="template" data-template-id="template3">
+                    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Template 3">
+                    <div>
+                        <p id="templateID">Template 4</p>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="template" data-template-id="template3">
+                    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Template 3">
+                    <div>
+                        <p id="templateID">Template 5</p>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="template" data-template-id="template3">
+                    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Template 3">
+                    <div>
+                        <p id="templateID">Template 6</p>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="template" data-template-id="template3">
+                    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Template 3">
+                    <div>
+                        <p id="templateID">Template 8</p>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="template" data-template-id="template3">
+                    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Template 3">
+                    <div>
+                        <p id="templateID">Template 9</p>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more templates as needed -->
+        </div>
+
     </div>
 
-    <script src="./js/dashboard.js"></script>
+    <script type="module" src="./js/dashboard.js"></script>
 </body>
 
 </html>

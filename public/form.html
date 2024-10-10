@@ -7,65 +7,74 @@
     <title>PortDev</title>
 
     <link rel="stylesheet" href="./css/form.css">
-
-    <!-- update the version number as needed -->
-    <!-- <script defer src="/__/firebase/10.14.0/firebase-app-compat.js"></script> -->
-    <!-- include only the Firebase features as you need -->
-    <!-- <script defer src="/__/firebase/10.14.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.14.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.14.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.14.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.14.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.14.0/firebase-storage-compat.js"></script> -->
 </head>
 
 <body>
-    <img src="./assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="background-image" class="background-image">
     <div class="wrapper">
-        <h1 class="heading">Please fill in the details</h1>
-        <form action="" id="form">
+        <h1 class="heading">Please fill in the required inputs ' <span class="required">*</span> '</h1>
+        <form id="form">
+            <!-- GitHub Username Input -->
             <div class="username">
+                <label for="gitHubUsername" class="label">GitHub Username<span class="required">*</span></label>
                 <input type="text" name="name" id="gitHubUsername" placeholder="">
-                <div class="label">GitHub Username<span class="required">*</span></div>
             </div>
+
+            <!-- Profession Input with Suggestions -->
+            <div class="profession">
+                <label for="profession" class="label">What do you do?<span class="required">*</span></label>
+                <input type="text" name="profession" id="profession" placeholder="">
+                <div id="professionSuggestions" class="dropdown"></div>
+            </div>
+
+            <!-- Social Links -->
             <div class="socials">
                 <span class="span">Socials</span>
                 <div class="social1">
+                    <label for="instagram" class="label">Instagram Profile Link <span
+                            class="optional">(optional)</span></label>
                     <input type="text" name="instagram" id="instagram" placeholder="">
-                    <div class="label">Instagram Profile Link <span class="optional">(optional)</span></div>
                 </div>
                 <div class="social2">
+                    <label for="twitter" class="label">Twitter Profile Link <span
+                            class="optional">(optional)</span></label>
                     <input type="text" name="twitter" id="twitter" placeholder="">
-                    <div class="label">Twitter Profile Link <span class="optional">(optional)</span></div>
                 </div>
                 <div class="social3">
+                    <label for="linkedin" class="label">LinkedIn Profile Link <span
+                            class="optional">(optional)</span></label>
                     <input type="text" name="linkedin" id="linkedin" placeholder="">
-                    <div class="label">LinkedIn Profile Link <span class="optional">(optional)</span></div>
                 </div>
             </div>
+
+            <!-- Skills Section with Suggestions -->
             <div class="skills">
                 <div class="skill1 skillInput">
+                    <label for="techSkill" class="label">What technology do you use?<span
+                            class="required">*</span></label>
                     <input type="text" name="skills" id="techSkill" placeholder="">
-                    <div class="label">Skills<span class="required">*</span></div>
                     <div id="suggestions" class="dropdown"></div>
                 </div>
                 <div class="skillsAdded"></div>
-                <button onclick="addSkill(event)" type="button">ADD SKILL</button>
+                <button id="addTech" type="button">ADD TECHNOLOGY</button>
             </div>
+
+            <!-- About Section -->
             <div class="about">
                 <textarea name="description" id="description" cols="30" rows="10"
                     placeholder="Tell us about yourself"></textarea>
                 <div class="btn">
-                    <button onclick="generateDescriptionTemplate()" type="button" class="generateTemplate-btn">Generate
-                        Description
+                    <button id="generateDescription" type="button" class="generateTemplate-btn">Use Description
                         template</button>
                 </div>
             </div>
-            <button type="button" class="submitForm-btn" onclick="submitForm()">SUBMIT</button>
+
+            <!-- Submit Button -->
+            <button type="button" class="submitForm-btn" id="submitButton" onclick="submitForm()">SUBMIT</button>
         </form>
     </div>
 
-    <script src="./js/form.js"></script>
+
+    <script type="module" src="./js/form.js"></script>
 </body>
 
 </html>

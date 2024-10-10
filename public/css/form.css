@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
   margin: 0;
@@ -7,9 +7,30 @@
   text-decoration: none;
 }
 
+:root {
+  --clr-black: #010409;
+  --clr-clear: #b7bdc8;
+
+  /* BORDER */
+  --border-clear: 1px solid var(--clr-clear);
+  --border-black: 1px solid var(--clr-black);
+  --curved-edge: 10px;
+  --full-circle: 50%;
+  --pill-shape: 100vw;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--clr-black);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-clear);
+  border-radius: var(--pill-shape);
+}
 body {
   font-family: Montserrat, sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--clr-black);
 }
 
 .wrapper {
@@ -21,21 +42,11 @@ body {
   align-items: center;
 }
 
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(30%);
-}
-
 .heading {
-  color: #fff;
-  font-size: 2rem;
+  color: var(--clr-clear);
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  padding-block: 1rem 0.5rem;
   text-align: center;
 }
 
@@ -43,40 +54,45 @@ form {
   width: 100%;
   max-width: 700px;
   padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: var(--clr-black);
+  border-radius: var(--curved-edge);
+  border: var(--border);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   overflow: auto;
+  scroll-behavior: smooth;
   flex-direction: column;
 }
 
 .socials {
-    position: relative;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    padding-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+  position: relative;
+  border-top: 1px solid var(--clr-clear);
+  border-bottom: 1px solid var(--clr-clear);
+  padding-top: 35px;
+  margin-bottom: 20px;
+  border-radius: var(--curved-edge);
 }
 
 .socials .span {
-    position: absolute;
-    top: -10px;
-    background-color: #fff;
-    padding-inline: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
+  position: absolute;
+  top: -10px;
+  background-color: var(--clr-black);
+  padding-inline: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  color: var(--clr-clear);
+  z-index: 1;
 }
 
 .required {
-    color: red;
+  color: red;
+  font-size: 1.1rem;
 }
 .optional {
-    color: #ccc;
+  color: #ccc;
 }
 .username,
+.profession,
 .social1,
 .social2,
 .social3,
@@ -96,18 +112,14 @@ form {
   gap: 2.5px;
 }
 
-.label,
-.label,
-.label,
 .label {
   position: absolute;
-  top: 25%;
+  top: -10px;
   font-size: 0.8rem;
   left: 10px;
-  color: #424242;
+  color: var(--clr-clear);
   transition: 0.3s;
-  background-color: #fff;
-  top: -5px;
+  background-color: var(--clr-black);
   padding-inline: 6px;
 }
 
@@ -116,13 +128,15 @@ textarea {
   width: 100%;
   padding: 10px;
   padding-top: 15px;
-  border-radius: 5px;
+  border-radius: var(--curved-edge);
   border: 1px solid #ccc;
-  line-height: 1rem;
+  line-height: 1.3rem;
   font-size: 1rem;
   font-weight: 400;
   word-spacing: 3px;
-  color: #333;
+  letter-spacing: 2px;
+  color: var(--clr-clear);
+  background-color: var(--clr-black);
   font-family: "Roboto", sans-serif;
   outline: none;
 }
@@ -133,10 +147,10 @@ textarea {
 .revert {
   width: 100%;
   padding: 5px 15px;
-  border-radius: 5px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
+  border-radius: var(--curved-edge);
+  border: var(--border-black);
+  background-color: var(--clr-clear);
+  color: var(--clr-black);
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 20px;
@@ -144,10 +158,13 @@ textarea {
   transition: 0.3s;
 }
 
-.skillInput button:hover,
+.skills button:hover,
 .submitForm-btn:hover,
-.generateTemplate-btn:hover {
-  background-color: #0069d9;
+.generateTemplate-btn:hover,
+.revert:hover {
+  background-color: var(--clr-black);
+  color: var(--clr-clear);
+  border: var(--border-clear);
 }
 .skillsAdded {
   display: flex;
@@ -162,21 +179,24 @@ textarea {
   align-items: center;
   gap: 10px;
   padding: 5px;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 5px;
+  background-color: var(--clr-clear);
+  color: var(--clr-black);
+  font-weight: 700;
+  border-radius: var(--curved-edge);
 }
 
 .dropdown {
-  border: 1px solid #ccc;
+  display: none;
+  border: var(--border-clear);
   max-height: 150px;
   position: absolute;
   overflow-y: auto;
   top: 100%;
   z-index: 1000;
-  border-radius: 10px;
+  border-radius: var(--curved-edge);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  background-color: white;
+  background-color: var(--clr-black);
+  color: var(--clr-clear);
   width: 100%;
 }
 .dropdown div {
@@ -185,9 +205,11 @@ textarea {
   height: 100%;
   z-index: 1000;
   cursor: pointer;
+  transition: 0.1s;
 }
 .dropdown div:hover {
-  background-color: #f0f0f0;
+  background-color: var(--clr-clear);
+  color: var(--clr-black);
 }
 
 .generateTemplate-btn,
