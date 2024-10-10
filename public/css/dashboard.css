@@ -13,7 +13,7 @@
 
   /* BORDER */
   --border: 1px solid var(--clr-clear);
-  --curved-edge: 10px;
+  --curved-edge: 6px;
   --full-circle: 50%;
   --pill-shape: 100vw;
 }
@@ -77,7 +77,7 @@ body {
   width: 100vw;
   max-width: 1240px;
   margin: 0 auto;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -342,7 +342,7 @@ body {
   }
 }
 
-@media (width < 825px) {
+@media (width < 780px) {
   .navigate-scroll {
     display: flex;
     transition: 0.3s;

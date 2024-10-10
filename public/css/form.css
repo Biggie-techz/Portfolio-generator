@@ -14,7 +14,7 @@
   /* BORDER */
   --border-clear: 1px solid var(--clr-clear);
   --border-black: 1px solid var(--clr-black);
-  --curved-edge: 10px;
+  --curved-edge: 6px;
   --full-circle: 50%;
   --pill-shape: 100vw;
 }
@@ -68,8 +68,8 @@ form {
   position: relative;
   border-top: 1px solid var(--clr-clear);
   border-bottom: 1px solid var(--clr-clear);
-  padding-top: 35px;
-  margin-bottom: 20px;
+  padding-block: 35px 20px;
+  margin-block: 50px;
   border-radius: var(--curved-edge);
 }
 
@@ -100,7 +100,7 @@ form {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   gap: 2.5px;
 }
 
@@ -114,13 +114,16 @@ form {
 
 .label {
   position: absolute;
-  top: -10px;
+  top: -20px;
   font-size: 0.8rem;
   left: 10px;
   color: var(--clr-clear);
   transition: 0.3s;
   background-color: var(--clr-black);
-  padding-inline: 6px;
+  border-radius: var(--curved-edge);
+  border-right: var(--border-clear);
+  border-left: var(--border-clear);
+  padding: 6px;
 }
 
 input,
